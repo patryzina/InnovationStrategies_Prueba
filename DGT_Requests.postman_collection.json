@@ -1,0 +1,232 @@
+{
+	"info": {
+		"_postman_id": "bb680eb9-0d94-418a-96aa-cf9f3147cbfa",
+		"name": "DGT_Requests",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "POST CreateConductor",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"DNI\" : \"12345678A\",\n\t\"Nombre\" : \"Conductor 1\",\n\t\"Apellidos\" : \"Apellidos conductor 1\",\n\t\"Puntos\": \"14\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:60940/api/conductores",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "60940",
+					"path": [
+						"api",
+						"conductores"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST CreateVehiculo",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					},
+					{
+						"key": "Accept",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"Matricula\" : \"1111-ABC\",\n\t\"Marca\" : \"Marca 1\",\n\t\"Modelo\" : \"Marca 1 - Modelo 1\",\n\t\"DniConductor\": \"12345678A\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:60940/api/vehiculos",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "60940",
+					"path": [
+						"api",
+						"vehiculos"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST CreateTipoInfraccion",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					},
+					{
+						"key": "Accept",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"Id\" : \"ID_INFRACCION_1\",\n\t\"Descripcion\" : \"Descripción Infracción 1\",\n\t\"CostePuntos\": \"5\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:60940/api/infracciones/tipoInfraccion",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "60940",
+					"path": [
+						"api",
+						"infracciones",
+						"tipoInfraccion"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST CreateInfraccion",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					},
+					{
+						"key": "Accept",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"Id\" : \"ID_INFRACCION_1\",\n\t\"Descripcion\" : \"Descripción Infracción 1\",\n\t\"CostePuntos\": \"5\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:60940/api/infracciones",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "60940",
+					"path": [
+						"api",
+						"infracciones"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET TipoInfraccionComunes",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:60940/api/infracciones/tipoInfraccion/3",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "60940",
+					"path": [
+						"api",
+						"infracciones",
+						"tipoInfraccion",
+						"3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET InfraccionesConductor",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:60940/api/infracciones/312345678A",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "60940",
+					"path": [
+						"api",
+						"infracciones",
+						"312345678A"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET TopNConductores",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:60940/api/conductores/5",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "60940",
+					"path": [
+						"api",
+						"conductores",
+						"5"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
